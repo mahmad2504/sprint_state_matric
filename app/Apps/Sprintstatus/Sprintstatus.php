@@ -410,7 +410,7 @@ class Sprintstatus extends App{
 			}
 		}
 		$sprint_data = $this->FetchSprintData($this->options['sprint']);
-		dd($sprint_data);
+		
 		$sprintstart = $this->DateStringToObj($sprint_data->startDate)->timestamp;
 		$sprintend = $this->DateStringToObj($sprint_data->endDate)->timestamp;
 		
