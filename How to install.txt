@@ -1,0 +1,22 @@
+https://git-scm.com/download/win
+
+git clone https://github.com/mahmad2504/sprint_state_matric.git
+
+
+https://windows.php.net/downloads/releases/
+https://windows.php.net/downloads/releases/php-7.4.21-Win32-vc15-x64.zip
+
+https://www.apachefriends.org/download.html
+7.4.21 / PHP 7.4.21
+
+Add in path c:/xampp/php
+
+https://getcomposer.org/download/
+https://getcomposer.org/Composer-Setup.exe
+
+It will ask for php.exe path. It is usually where you install xampp
+
+c://xampp/php 
+
+
+
