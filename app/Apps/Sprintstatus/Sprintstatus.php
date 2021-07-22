@@ -26,6 +26,9 @@ class Sprintstatus extends App{
 		$this->state_row_in_template = 8;
 		$this->task_row_in_template = $this->state_row_in_template+2;
 		$this->options = $options;
+		$states = $this->Read('states');
+		if($states==null)
+			$this->options['rebuild']=1;
 		parent::__construct($this);
 
     }
