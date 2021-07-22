@@ -233,7 +233,7 @@ class Sprintstatus extends App{
 	}
 	public function ReadStates($rebuild=0)
 	{
-		$states = $this->Read('states')->data;
+		$states = $this->Read('states');
 		if(($states==null)||($rebuild==1))
 		{
 			$states = $this->FetchJiraTicketStates();
@@ -241,9 +241,9 @@ class Sprintstatus extends App{
 			$o->id = 'states';
 			$o->data = $states;
 			$this->save($o);
-			$states = $this->Read('states')->data;
+			$states = $this->Read('states');
 		}
-		return $states;
+		return $states->data;
 	}
 	public function ProcessTickets($tickets,$sprintstart,$sprintend,$states,$sprint_state)
 	{
@@ -398,8 +398,9 @@ class Sprintstatus extends App{
 		if($this->options['sprint'] ==  "null")
 			dd('Sprint id missing');
 		
-		$states_to_track = $this->GetStatesToTrack();
 		$states = $this->ReadStates();
+		$states_to_track = $this->GetStatesToTrack();
+		
 		$warned = [];
 		foreach($states_to_track as $s=>$statedata)
 		{
