@@ -20,8 +20,6 @@
         "mpdf/mpdf": "^8.0",
         "nesbot/carbon": "^2.41",
         "phpmailer/phpmailer": "^6.2",
-        "phpoffice/phpspreadsheet": "^1.18",
-        "phpoffice/phpword": "^0.18.2",
         "tecnickcom/tcpdf": "^6.4"
     },
     "require-dev": {
