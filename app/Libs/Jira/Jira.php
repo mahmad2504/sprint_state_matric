@@ -38,6 +38,12 @@ class Jira
 	public static function Init($app)
 	{
 		self::$server = $app->jira_server;
+		
+		$file_headers = @get_headers(env('JIRA_'.self::$server.'_URL'));
+		if($file_headers==false)
+		{
+			dd(env('JIRA_'.self::$server.'_URL')." is not accessible");
+		}
 		self::$issueService = new IssueService(new ArrayConfiguration([
 			 'jiraHost' => env('JIRA_'.self::$server.'_URL'),
               'jiraUser' => env('JIRA_'.self::$server.'_USERNAME'),

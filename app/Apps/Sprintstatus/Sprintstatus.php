@@ -32,7 +32,7 @@ class Sprintstatus extends App{
 		parent::__construct($this);
 
     }
-	public function TimeToRun($update_every_xmin=10)
+	public function TimeToRun($update_every_xmin=1)
 	{
 		return parent::TimeToRun($update_every_xmin);
 	}
