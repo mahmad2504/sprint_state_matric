@@ -6,4 +6,4 @@ RUN git clone https://github.com/mahmad2504/sprint_state_matric.git
 WORKDIR /sprint_state_matric
 RUN chmod a+x gitfetch.bat && ./gitfetch.bat && chmod a+x gitfetch.bat 
 RUN composer install
-COPY .env .
+COPY env .env
