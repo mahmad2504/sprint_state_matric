@@ -17,3 +17,4 @@ report.xlsx
 sprintstatus_lastupdate
 sprintstatus_sync_requested
 states
+jira-rest-client.log
